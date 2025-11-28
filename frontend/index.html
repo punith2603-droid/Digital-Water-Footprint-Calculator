@@ -1,0 +1,75 @@
+<!-- frontend/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Digital Water Footprint Calculator</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+      <div class="logo">💧</div>
+      <div class="title">Digital Water Footprint Calculator</div>
+      <div class="subtitle">Understand your water usage and make eco-friendly choices</div>
+    </div>
+  </header>
+
+  <main class="container main">
+    <div class="search-wrap">
+      <input id="searchInput" type="search" placeholder="Search for items..." />
+    </div>
+
+    <div class="categories" id="categories">
+      <button class="cat active" data-cat="all">All</button>
+      <button class="cat" data-cat="greens">Greens</button>
+      <button class="cat" data-cat="meat">Meat</button>
+      <button class="cat" data-cat="fruits">Fruits</button>
+      <button class="cat" data-cat="grains">Grains</button>
+      <button class="cat" data-cat="drinks">Drinks</button>
+      <button class="cat" data-cat="dairy">Dairy</button>
+      <button class="cat" data-cat="others">Others</button>
+    </div>
+
+    <section id="grid" class="grid"></section>
+
+    <section class="forms">
+      <div class="card small">
+        <h3>Request to Add Item</h3>
+        <form id="requestForm">
+          <input name="requesterName" placeholder="Your name" />
+          <input name="email" placeholder="Email" />
+          <input name="itemName" placeholder="Item name" required/>
+          <textarea name="details" placeholder="Details / source (optional)"></textarea>
+          <button type="submit">Send Request</button>
+          <div id="requestMsg" class="msg"></div>
+        </form>
+      </div>
+
+      <div class="card small">
+        <h3>Feedback</h3>
+        <form id="feedbackForm">
+          <input name="name" placeholder="Your name" />
+          <input name="email" placeholder="Email" />
+          <textarea name="message" placeholder="Your feedback" required></textarea>
+          <button type="submit">Submit Feedback</button>
+          <div id="feedbackMsg" class="msg"></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- modal -->
+  <div id="modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <div class="modal-inner">
+      <button id="modalClose" class="close">×</button>
+      <h2 id="modalTitle"></h2>
+      <img id="modalImg" src="" alt="" class="modal-img"/>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

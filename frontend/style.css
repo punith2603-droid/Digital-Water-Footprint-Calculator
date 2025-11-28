@@ -1,0 +1,40 @@
+/* frontend/style.css */
+:root{
+  --teal:#00a8c6;
+  --deep:#0a6b7a;
+  --bg:#d8f4f6;
+  --card:#ffffff;
+  --muted:#666;
+  --accent:#0b6275;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#bfeff0,#dff6f6);color:#0a3b45}
+.topbar{background:linear-gradient(90deg,#008aa3,#00b4c6);color:#fff;padding:28px 0;text-align:center;box-shadow:0 6px 18px rgba(0,0,0,.12)}
+.topbar .title{font-size:28px;font-weight:800}
+.topbar .subtitle{font-size:14px;opacity:.9}
+.container{max-width:1200px;margin:0 auto;padding:0 18px}
+.main{padding:30px 0}
+.search-wrap{display:flex;justify-content:center;margin-bottom:18px}
+#searchInput{width:80%;max-width:900px;padding:14px 18px;border-radius:30px;border:0;box-shadow:0 6px 18px rgba(2,30,36,.08);font-size:16px}
+.categories{display:flex;gap:18px;justify-content:center;margin:10px 0 26px;flex-wrap:wrap}
+.cat{background:#fff;border-radius:12px;padding:24px 28px;box-shadow:0 8px 18px rgba(2,30,36,.06);border:none;cursor:pointer;font-weight:600}
+.cat.active{background:linear-gradient(180deg,#fff,#f7fff8);box-shadow:0 12px 20px rgba(0,0,0,.08)}
+.grid{display:flex;gap:20px;flex-wrap:wrap;justify-content:flex-start}
+.card{background:var(--card);border-radius:14px;padding:18px;width:260px;box-shadow:0 10px 26px rgba(2,30,36,.08);text-align:center;margin-bottom:20px}
+.card img{width:130px;height:130px;object-fit:contain;margin:8px auto}
+.card h3{color:var(--accent);margin:8px 0}
+.card p{color:var(--muted);margin:6px 0;font-size:14px}
+.small{width:48%;min-width:300px}
+.forms{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:28px}
+.card.small form input,.card.small textarea{width:100%;padding:8px;margin:8px 0;border-radius:8px;border:1px solid #e6eef0}
+.card.small button{background:var(--accent);color:#fff;border:none;padding:10px 12px;border-radius:8px;cursor:pointer}
+.msg{margin-top:6px;font-size:13px;color:green}
+
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(5,20,30,.55);display:flex;align-items:center;justify-content:center;z-index:2000}
+.modal.hidden{display:none}
+.modal-inner{background:#fff;border-radius:12px;padding:28px;max-width:420px;width:92%;text-align:center;position:relative;box-shadow:0 18px 36px rgba(0,0,0,.3)}
+.modal-img{width:140px;height:140px;object-fit:contain;margin:6px auto}
+.close{position:absolute;top:10px;right:12px;border:0;background:transparent;font-size:22px;cursor:pointer;color:#0a6b7a}
+.modal-body p{color:#0b5562;margin:10px 0;font-weight:700}
