@@ -1,5 +1,38 @@
-﻿node_modules/
-.env
+﻿# ==========================
+#  ENVIRONMENT VARIABLES
+# ==========================
+backend/.env
+frontend/.env
+
+# ==========================
+#  NODE MODULES
+# ==========================
+backend/node_modules/
+frontend/node_modules/
+
+# ==========================
+#  LOG FILES
+# ==========================
 *.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ==========================
+#  SYSTEM FILES
+# ==========================
 .DS_Store
+Thumbs.db
+
+# ==========================
+#  APP DATA FILES
+# ==========================
+backend/requests.json
+backend/feedback.json
+backend/items.json
+
+# ==========================
+#  EDITABLE DESIGN FILES
+# ==========================
 frontend/images/*.psd
